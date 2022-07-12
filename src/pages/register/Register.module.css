@@ -1,0 +1,18 @@
+.register {
+  color: var(--grey-color);
+  display: flex;
+}
+.features {
+  flex-shrink: 1.2;
+}
+
+.register__agreement {
+  display: flex;
+}
+.primary-color {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.register__agreement p {
+  margin-left: 1rem;
+}
