@@ -1,0 +1,15 @@
+.feature-item {
+  color: #fff;
+  margin: 2rem;
+}
+.feature-item__icons {
+  font-size: 3rem;
+}
+.feature-item__heading {
+  font-size: 1.8rem;
+  margin: 1rem 0 1.4rem 0;
+}
+
+p {
+  font-size: 1.6rem;
+}

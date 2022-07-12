@@ -1,9 +1,18 @@
 @import-normalize;
 
+:root {
+  --primary-color: #f75757;
+  --grey-color: #b0cad1;
+}
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 html {
   font-size: 62.5%;

@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faTruckFast } from '@fortawesome/free-solid-svg-icons';
+import styles from './feature-item.module.css';
 
 const FeatureItem = ({ icon, title, message }) => {
   return (
-    <>
-      <div className='feature__icons'>
+    <div className={styles['feature-item']}>
+      <div className={styles['feature-item__icons']}>
         <FontAwesomeIcon icon={icon} />
       </div>
-      <h3 className='feature__heading'>{title}</h3>
+      <h3 className={styles['feature-item__heading']}>{title}</h3>
       <p>{message}</p>
-    </>
+    </div>
   );
 };
 export default FeatureItem;
