@@ -1,7 +1,7 @@
 import styles from './form.module.css';
 import * as Icon from 'react-feather';
 
-const Form = ({ children }) => {
+const Form = ({ children, link }) => {
   return (
     <div className={styles.form}>
       <div className={styles['form__heading']}>
@@ -28,10 +28,7 @@ const Form = ({ children }) => {
           </li>
         </ul>
 
-        <p>
-          Already have an account? Click here{' '}
-          <span className={styles['primary-color']}>Login</span>
-        </p>
+        <p>{link}</p>
       </div>
       <div className={styles['form__footer']}>
         &copy; <span className={styles['primary-color']}>Tomatus</span>. All

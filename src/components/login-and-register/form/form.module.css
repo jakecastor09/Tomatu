@@ -8,8 +8,11 @@
   align-items: end;
   justify-content: center;
 }
+.form__heading {
+  margin-bottom: 2rem;
+}
 
-h1 {
+.form__heading h1 {
   color: var(--primary-color);
   transform: translateX(-1rem);
 }
@@ -46,5 +49,5 @@ h1 {
 }
 
 .form__footer {
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
