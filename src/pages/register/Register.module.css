@@ -3,7 +3,7 @@
   display: flex;
 }
 .features {
-  flex-shrink: 1.2;
+  width: 100%;
 }
 
 .register__agreement {
@@ -14,6 +14,7 @@
   color: var(--primary-color);
   font-weight: bold;
 }
+
 .register__agreement p {
   margin-left: 1rem;
   font-size: 1.2rem;

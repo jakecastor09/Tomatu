@@ -10,3 +10,8 @@ button {
   margin: 2rem 0;
   cursor: pointer;
 }
+
+.disabled-button {
+  background-color: rgb(108, 108, 108);
+  pointer-events: none;
+}

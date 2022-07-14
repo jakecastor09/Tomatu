@@ -10,7 +10,18 @@
 }
 
 .input-field:focus {
-  outline: none !important;
-  border: 2px solid #619edf;
-  box-shadow: 0 0 5px #719ece;
+  outline: none;
+  border: 2px solid #b8d7f8;
+}
+
+.success {
+  border: 1.5px solid #28a745;
+}
+
+.invalid {
+  border: 1px solid #b40e0e;
+}
+
+.invalid:focus {
+  border-color: var(--primary-color);
 }

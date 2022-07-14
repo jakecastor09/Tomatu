@@ -1,6 +1,8 @@
 import styles from './form-input.module.css';
 
-const FormInput = ({ label, ...otherProps }) => {
+const FormInput = ({ label, isValid, invalidStyle, ...otherProps }) => {
+  const invalid = invalidStyle ? styles.invalid : '';
+  const successClasses = isValid ? styles.success : '';
   return (
     <div className={styles['form-input']}>
       {label && (
@@ -9,7 +11,7 @@ const FormInput = ({ label, ...otherProps }) => {
         </label>
       )}
       <input
-        className={styles['input-field']}
+        className={`${styles['input-field']} ${invalid} ${successClasses}`}
         id={label}
         {...otherProps}
       ></input>

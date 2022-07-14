@@ -1,6 +1,11 @@
 .form {
   padding: 5rem;
   text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
 }
 
 .form__logo {
@@ -49,5 +54,7 @@
 }
 
 .form__footer {
-  margin-top: 8rem;
+  position: absolute;
+  transform: translateX(50%);
+  bottom: 2rem;
 }
