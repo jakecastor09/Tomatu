@@ -1,5 +1,5 @@
 import styles from './register.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Features from '../../components/login-and-register/features/features.component';
 import FormInput from '../../components/form-input/form-input.component';
 import Form from '../../components/login-and-register/form/form.component';
@@ -20,6 +20,8 @@ const inputNumberErrorMessage =
 const inputPasswordErrorMessage = 'Password must be more than 5 letters';
 
 const Register = () => {
+  const [isAgreeToTermAndCondition, setIsAgreeToTermAndCondition] =
+    useState(false);
   const {
     errorMessageComponent: inputNumberErrorMessageComponent,
     hasError: numberInputHasError,
@@ -49,15 +51,32 @@ const Register = () => {
     </p>
   );
 
-  let formIsValid = false;
-  if (
+  const allFormIsValid =
     !passwordInputHasError &&
     enteredPasswordIsValid &&
     !numberInputHasError &&
-    enteredNumberIsValid
-  )
-    formIsValid = true;
+    enteredNumberIsValid &&
+    isAgreeToTermAndCondition;
 
+  let formIsValid = false;
+  if (allFormIsValid) formIsValid = true;
+
+  const submitFormHandler = event => {
+    event.preventDefault();
+
+    if (!allFormIsValid) return;
+
+    console.log(enteredNumber);
+    console.log(enteredPassword);
+
+    // Reset all input field
+    resetNumberInput();
+    resetPasswordInput();
+  };
+
+  const checkboxHandler = event => {
+    setIsAgreeToTermAndCondition(event.target.checked);
+  };
   return (
     <section className={`${styles.register} container`}>
       <div className={styles.features}>
@@ -71,7 +90,7 @@ const Register = () => {
             <span className={styles['primary-color']}>$25</span> off of your
             next Meal
           </p>
-          <form action='#'>
+          <form onSubmit={submitFormHandler}>
             <FormInput
               isValid={enteredNumberIsValid}
               invalidStyle={numberInputClasses}
@@ -97,7 +116,7 @@ const Register = () => {
 
             <FormInput type='email' id='email' placeholder='Email ID' />
             <div className={styles['register__agreement']}>
-              <input type='checkbox' />
+              <input type='checkbox' onChange={checkboxHandler} />
               <p>
                 By creating this account, you agree to our{' '}
                 <span style={{ color: 'var(--primary-color)' }}>
