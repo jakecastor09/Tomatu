@@ -2,7 +2,7 @@
   height: 88vh;
   margin: 1rem 1rem 0 0;
   padding: 1rem;
-  width: 28rem;
+  min-width: 28rem;
   overflow-y: scroll;
 }
 .title {
@@ -14,7 +14,7 @@
 }
 
 .sidebar-footer {
-  margin-top: 10rem;
+  margin-top: 20rem;
 }
 .sidebar-footer p {
   font-size: 1.2rem;
