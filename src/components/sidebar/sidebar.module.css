@@ -1,0 +1,27 @@
+.sidebar {
+  height: 88vh;
+  margin: 1rem 1rem 0 0;
+  padding: 1rem;
+  width: 28rem;
+  overflow-y: scroll;
+}
+.title {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+}
+
+.sidebar-footer {
+  margin-top: 10rem;
+}
+.sidebar-footer p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1.8rem;
+}
+.primary-color {
+  color: var(--primary-color);
+  font-weight: bold;
+}

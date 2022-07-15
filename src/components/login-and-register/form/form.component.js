@@ -1,5 +1,5 @@
 import styles from './form.module.css';
-import * as Icon from 'react-feather';
+import SocialNetwork from '../../social-network/social-network.component';
 
 const Form = ({ children, link }) => {
   return (
@@ -13,21 +13,7 @@ const Form = ({ children, link }) => {
       {children}
       <div className={styles['social-media']}>
         <span>Or with Social Network</span>
-        <ul className={styles['social-media__list']}>
-          <li className={styles['icon']}>
-            <Icon.Facebook />
-          </li>
-          <li className={styles['icon']}>
-            <Icon.Twitter />
-          </li>
-          <li className={styles['icon']}>
-            <Icon.Linkedin />
-          </li>
-          <li className={styles['icon']}>
-            <Icon.Instagram />
-          </li>
-        </ul>
-
+        <SocialNetwork />
         <p>{link}</p>
       </div>
       <div className={styles['form__footer']}>

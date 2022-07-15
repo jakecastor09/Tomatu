@@ -25,24 +25,6 @@
   transform: translateY(-0.2rem);
   font-size: 1.2rem;
 }
-.social-media__list {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin: 1rem;
-}
-.social-media__list > .icon:nth-child(1) {
-  color: rgb(36, 124, 225);
-}
-.social-media__list > .icon:nth-child(2) {
-  color: rgb(32, 165, 218);
-}
-.social-media__list > .icon:nth-child(3) {
-  color: rgb(22, 120, 159);
-}
-.social-media__list > .icon:nth-child(4) {
-  color: rgb(159, 59, 22);
-}
 
 .primary-color {
   color: var(--primary-color);

@@ -1,0 +1,52 @@
+.item {
+  padding: 2rem;
+  position: relative;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.item:hover {
+  background-color: #f4f4f4;
+}
+
+.item::before {
+  background-color: var(--primary-color);
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s;
+  width: 4px;
+}
+
+.item:hover::before {
+  transform: scaleY(5);
+  height: 20%;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.item__icon {
+  color: var(--grey-color);
+  font-size: 2.2rem;
+  opacity: 0;
+}
+
+.item:hover > .item__icon {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.item__name {
+  font-size: 1.6rem;
+  margin-left: 1.6rem;
+  color: #b0cad1;
+}
+.item:hover > .item__name {
+  color: var(--primary-color);
+  font-weight: 700;
+  transition: all 0.2s;
+}
