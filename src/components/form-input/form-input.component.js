@@ -1,6 +1,13 @@
 import styles from './form-input.module.css';
 
-const FormInput = ({ label, isValid, invalidStyle, ...otherProps }) => {
+const FormInput = ({
+  label,
+  isCheckBox = 'false',
+  children,
+  isValid,
+  invalidStyle,
+  ...otherProps
+}) => {
   const invalid = invalidStyle ? styles.invalid : '';
   const successClasses = isValid ? styles.success : '';
   return (
@@ -10,11 +17,15 @@ const FormInput = ({ label, isValid, invalidStyle, ...otherProps }) => {
           {label}
         </label>
       )}
-      <input
-        className={`${styles['input-field']} ${invalid} ${successClasses}`}
-        id={label}
-        {...otherProps}
-      ></input>
+      {isCheckBox === 'false' && (
+        <input
+          className={`${styles['input-field']} ${invalid} ${successClasses}`}
+          id={label}
+          {...otherProps}
+        ></input>
+      )}
+
+      {isCheckBox === 'true' && children}
     </div>
   );
 };

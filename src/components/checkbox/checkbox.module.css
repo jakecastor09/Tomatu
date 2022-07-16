@@ -1,0 +1,13 @@
+.checkbox {
+  color: var(--grey-color);
+  margin: 1rem;
+  transform: translateX(-1.1rem);
+}
+input {
+  color: var(--grey-color);
+  margin-right: 1.2rem;
+  accent-color: var(--grey-color);
+}
+label {
+  font-size: 1.4rem;
+}

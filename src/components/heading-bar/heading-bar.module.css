@@ -1,11 +1,12 @@
 .heading-bar {
-  width: 100%;
+  width: 98%;
   padding: 2rem 3rem;
-  height: 5rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f4f4f4;
+  background-color: #fff;
+  margin: 0 auto 1rem auto;
 }
 .primary-color {
   color: var(--primary-color);

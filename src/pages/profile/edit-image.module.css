@@ -1,0 +1,15 @@
+.edit-image {
+  width: 35rem;
+  height: 26rem;
+  background-color: var(--light-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.edit-image__name {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  text-decoration: underline;
+}

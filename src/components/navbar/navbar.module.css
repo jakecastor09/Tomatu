@@ -1,12 +1,12 @@
 .navbar {
   align-items: center;
-  background-color: #fff;
   display: flex;
   height: 8vh;
   justify-content: space-between;
   margin-bottom: 1rem;
   overflow: hidden;
   padding: 2rem 4rem;
+  background-color: var(--light-color);
 }
 
 .left-side {

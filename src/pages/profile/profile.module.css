@@ -1,3 +1,25 @@
+.profile {
+  background-color: var(--light-background-color);
+}
+.profile__content {
+  margin: 3rem 3rem;
+  display: flex;
+}
+.profile__content--edit-image {
+  margin-right: 1rem;
+}
+.profile__container {
+  width: 100vw;
+}
 .flex {
   display: flex;
+}
+.profile__content--title {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+.profile__content--personal-info {
+  width: 100%;
+  background-color: #fff;
+  padding: 3.5rem 2.5rem;
 }
