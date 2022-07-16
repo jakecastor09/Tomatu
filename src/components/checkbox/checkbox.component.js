@@ -1,11 +1,10 @@
 import styles from './checkbox.module.css';
-const CheckBox = ({ name, onChange, id, isChecked }) => {
+const CheckBox = ({ name, onChange, isChecked }) => {
   return (
     <div className={styles.checkbox}>
       <input
         type='checkbox'
         checked={isChecked}
-        id={id}
         name={name}
         onChange={onChange}
       />

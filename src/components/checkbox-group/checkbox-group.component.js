@@ -2,24 +2,23 @@ import { useState } from 'react';
 import styles from './checkbox-group.module.css';
 import CheckBox from '../checkbox/checkbox.component';
 const CheckBoxGroup = ({ list = [] }) => {
-  const [selectedByIndex, setSelectedByIndex] = useState(undefined);
+  const [selectedByName, setSelectedByName] = useState('');
   const checkBoxHandler = event => {
-    const id = event.target.id;
-    if (selectedByIndex === id) {
-      setSelectedByIndex(undefined);
+    const name = event.target.name;
+    if (selectedByName === name) {
+      setSelectedByName('');
       return;
     }
-    setSelectedByIndex(id);
+    setSelectedByName(name);
   };
 
   const renderAllCheckBox = list.map((item, index) => {
     return (
       <CheckBox
         key={index}
-        id={index}
         name={item}
         onChange={checkBoxHandler}
-        isChecked={selectedByIndex === index ? true : false}
+        isChecked={selectedByName === item ? true : false}
       />
     );
   });
