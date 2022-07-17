@@ -1,0 +1,12 @@
+.textarea {
+  width: 93%;
+  transform: translateX(-1.1rem);
+  border: 1px solid var(--grey-color);
+  border-radius: 0.4rem;
+  padding: 2rem;
+  color: var(--dark-grey-color);
+}
+.textarea:focus {
+  outline: none;
+  border: 2px solid var(--dark-grey-color);
+}

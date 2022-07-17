@@ -5,6 +5,8 @@ import HeadingBar from '../../components/heading-bar/heading-bar.component';
 import FormInput from '../../components/form-input/form-input.component';
 import EditImage from './edit-image.component';
 import CheckBoxGroup from '../../components/checkbox-group/checkbox-group.component';
+import TextArea from '../../components/text-area/text-area.component';
+import Button from '../../components/button/button';
 const Profile = () => {
   return (
     <section className={`${styles['profile']} container`}>
@@ -23,7 +25,7 @@ const Profile = () => {
                   Personal Information:
                 </h1>
                 <FormInput label='User Name*' placeholder='Name' />
-                <FormInput label='Gender*' isCheckBox='true'>
+                <FormInput label='Gender*'>
                   <CheckBoxGroup list={['Male', 'Female']} />
                 </FormInput>
                 <FormInput label='Date of Birth*' placeholder='DD/MM/YYYY' />
@@ -37,6 +39,10 @@ const Profile = () => {
                   type='password'
                   placeholder='*************'
                 />
+                <FormInput label='About Me*'>
+                  <TextArea name='About Me' placeholder='Write for..' />
+                </FormInput>
+
                 <FormInput label='Membership*' placeholder='eg.2 years ago' />
                 <FormInput label='Work*' placeholder='eg.ui designer' />
                 <FormInput
@@ -48,6 +54,7 @@ const Profile = () => {
                 <FormInput label='Facebook URL*' />
                 <FormInput label='Twitter URL*' />
                 <FormInput label='Linked In*' />
+                <Button className='small'>Save Profile</Button>
               </form>
             </div>
           </div>

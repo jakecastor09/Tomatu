@@ -2,7 +2,6 @@ import styles from './form-input.module.css';
 
 const FormInput = ({
   label,
-  isCheckBox = 'false',
   children,
   isValid,
   invalidStyle,
@@ -17,15 +16,14 @@ const FormInput = ({
           {label}
         </label>
       )}
-      {isCheckBox === 'false' && (
+      {!children && (
         <input
           className={`${styles['input-field']} ${invalid} ${successClasses}`}
           id={label}
           {...otherProps}
         ></input>
       )}
-
-      {isCheckBox === 'true' && children}
+      {children}
     </div>
   );
 };
