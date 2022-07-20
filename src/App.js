@@ -7,7 +7,7 @@ import FileUpload from './pages/profile/file-upload.component';
 function App() {
   return (
     <>
-      <FileUpload />
+      <Profile />
     </>
   );
 }

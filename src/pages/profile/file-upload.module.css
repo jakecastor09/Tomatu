@@ -1,0 +1,26 @@
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input-img {
+  background-color: var(--dark-grey-color);
+  border-radius: 100%;
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+}
+.input-file {
+  color: var(--grey-color);
+  transform: translateX(3rem);
+  width: 100%;
+  padding: 0 6rem;
+}
+.input-label {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
