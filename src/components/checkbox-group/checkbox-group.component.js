@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './checkbox-group.module.css';
 import CheckBox from '../checkbox/checkbox.component';
-const CheckBoxGroup = ({ list = [] }) => {
+const CheckBoxGroup = ({ list = [], innerRef }) => {
   const [selectedByName, setSelectedByName] = useState('');
   const checkBoxHandler = event => {
     const name = event.target.name;
@@ -19,6 +19,7 @@ const CheckBoxGroup = ({ list = [] }) => {
         name={item}
         onChange={checkBoxHandler}
         isChecked={selectedByName === item ? true : false}
+        innerRef={innerRef}
       />
     );
   });

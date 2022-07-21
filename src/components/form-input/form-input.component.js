@@ -5,6 +5,7 @@ const FormInput = ({
   children,
   isValid,
   invalidStyle,
+  innerRef,
   ...otherProps
 }) => {
   const invalid = invalidStyle ? styles.invalid : '';
@@ -20,6 +21,7 @@ const FormInput = ({
         <input
           className={`${styles['input-field']} ${invalid} ${successClasses}`}
           id={label}
+          ref={innerRef}
           {...otherProps}
         ></input>
       )}
