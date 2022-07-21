@@ -5,6 +5,8 @@ import Button from '../../components/button/button';
 import TextArea from '../../components/text-area/text-area.component';
 import styles from './form.module.css';
 
+import useGetData from '../../hook/use-get-data.component';
+
 const defaultProfileData = {
   basicInfo: {
     userName: '',
@@ -49,23 +51,6 @@ const reducer = (state, action) => {
 };
 
 const Form = () => {
-  const [dataFromFirebase, setDataFromFirebase] = useState();
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch(
-        'https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json'
-      );
-      if (!response.ok) {
-        console.log('Something went wrong!');
-      }
-      const responseData = await response.json();
-      console.log(setDataFromFirebase(responseData.state));
-    })();
-  }, []);
-
-  const [state, dispatch] = useReducer(reducer, dataFromFirebase);
-
   // Basic Info
   const userNameRef = useRef();
   const passwordRef = useRef();
@@ -85,6 +70,13 @@ const Form = () => {
   const facebookURLRef = useRef();
   const twitterURLRef = useRef();
   const linkedInRef = useRef();
+
+  const { data: responseData } = useGetData(
+    'https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json'
+  );
+
+  console.log('Response Data: ', responseData);
+  const [state, dispatch] = useReducer(reducer, responseData);
 
   const submitHandler = event => {
     event.preventDefault();
@@ -153,12 +145,17 @@ const Form = () => {
   };
 
   useEffect(() => {
-    fetch('https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json', {
-      method: 'PUT',
-      body: JSON.stringify({
-        state,
-      }),
-    });
+    (async () => {
+      await fetch(
+        'https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json',
+        {
+          method: 'PUT',
+          body: JSON.stringify({
+            basicInfo: { ...state.basicInfo },
+          }),
+        }
+      );
+    })();
   }, [state]);
 
   return (
