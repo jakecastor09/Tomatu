@@ -4,6 +4,6 @@
 }
 .profile__content--personal-info {
   width: 100%;
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 3.5rem 2.5rem;
 }

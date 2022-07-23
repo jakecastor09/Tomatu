@@ -1,8 +1,9 @@
-import styles from './profile.module.css';
+import styles from './profile-page.module.css';
 import Navbar from '../../components/navbar/navbar.component';
 import Sidebar from '../../components/sidebar/sidebar.component';
 import HeadingBar from '../../components/heading-bar/heading-bar.component';
-import EditImage from './edit-image.component';
+import FileUpload from './file-upload.component';
+
 import Form from './form.component';
 const Profile = () => {
   return (
@@ -14,7 +15,7 @@ const Profile = () => {
           <HeadingBar pageName='Profile' />
           <div className={styles['profile__content']}>
             <div className={styles['profile__content--edit-image']}>
-              <EditImage />
+              <FileUpload />
             </div>
             <Form />
           </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { storage } from '../../firebase/index';
+import ProfileContainer from '../../components/profile-container/profile-container.component';
 import {
   ref,
   uploadBytes,
@@ -62,7 +63,7 @@ const FileUpload = () => {
   };
 
   return (
-    <div className={styles['file-upload']}>
+    <ProfileContainer>
       <img className={styles['input-img']} src={avatar} alt='' />
       <input
         type='file'
@@ -73,7 +74,7 @@ const FileUpload = () => {
       <label className={styles['input-label']} onClick={handleUpload}>
         Edit Profile Image
       </label>
-    </div>
+    </ProfileContainer>
   );
 };
 export default FileUpload;

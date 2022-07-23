@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './login.module.css';
+import styles from './login-page.module.css';
 import Features from '../../components/login-and-register/features/features.component';
 import Form from '../../components/login-and-register/form/form.component';
 import FormInput from '../../components/form-input/form-input.component';

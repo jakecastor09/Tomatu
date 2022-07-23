@@ -1,7 +1,7 @@
 .sidebar {
   padding: 1rem;
   min-width: 28rem;
-  background-color: var(--light-color);
+  background-color: var(--white-color);
 }
 .title {
   color: var(--primary-color);

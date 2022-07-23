@@ -1,4 +1,4 @@
-import styles from './register.module.css';
+import styles from './register-page.module.css';
 import React, { useState } from 'react';
 import Features from '../../components/login-and-register/features/features.component';
 import FormInput from '../../components/form-input/form-input.component';

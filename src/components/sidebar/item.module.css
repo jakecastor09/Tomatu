@@ -43,7 +43,7 @@
 .item__name {
   font-size: 1.6rem;
   margin-left: 1.6rem;
-  color: #b0cad1;
+  color: var(--grey-color);
 }
 .item:hover > .item__name {
   color: var(--primary-color);

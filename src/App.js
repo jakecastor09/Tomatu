@@ -1,15 +1,10 @@
 import './App.css';
-import Register from './pages/register/register.component';
-import Login from './pages/login/login.component';
-import Profile from './pages/profile/profile.component';
-import CheckBox from './components/checkbox/checkbox.component';
-import FileUpload from './pages/profile/file-upload.component';
+import Register from './pages/register-page/register-page.component';
+import Login from './pages/login-page/login-page.component';
+import Profile from './pages/profile-page/profile-page.component';
+
 function App() {
-  return (
-    <>
-      <Profile />
-    </>
-  );
+  return <Profile />;
 }
 
 export default App;
