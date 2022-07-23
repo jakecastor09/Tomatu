@@ -5,6 +5,7 @@ const CheckBoxGroup = ({ list = [], innerRef }) => {
   const [selectedByName, setSelectedByName] = useState('');
   const checkBoxHandler = event => {
     const name = event.target.name;
+
     if (selectedByName === name) {
       setSelectedByName('');
       return;
@@ -17,6 +18,7 @@ const CheckBoxGroup = ({ list = [], innerRef }) => {
       <CheckBox
         key={index}
         name={item}
+        value={selectedByName}
         onChange={checkBoxHandler}
         isChecked={selectedByName === item ? true : false}
         innerRef={innerRef}

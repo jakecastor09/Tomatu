@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useReducer } from 'react';
+import { useRef, useEffect, useReducer } from 'react';
 import FormInput from '../../components/form-input/form-input.component';
 import CheckBoxGroup from '../../components/checkbox-group/checkbox-group.component';
 import Button from '../../components/button/button';
@@ -44,6 +44,31 @@ const reducer = (state, action) => {
       }
       return { ...state, basicInfo };
     }
+
+    case 'OTHER_DETAILS': {
+      const otherDetails = {
+        ...state.otherDetails,
+      };
+      for (const item in action.otherDetails) {
+        if (action.otherDetails[item]) {
+          otherDetails[item] = action.otherDetails[item];
+        }
+      }
+      return { ...state, otherDetails };
+    }
+
+    case 'SOCIAL_MEDIA': {
+      const socialMedia = {
+        ...state.socialMedia,
+      };
+
+      for (const item in action.socialMedia) {
+        if (action.socialMedia[item]) {
+          socialMedia[item] = action.socialMedia[item];
+        }
+      }
+      return { ...state, socialMedia };
+    }
     default: {
       return state;
     }
@@ -69,14 +94,13 @@ const Form = () => {
   //Social Medial
   const facebookURLRef = useRef();
   const twitterURLRef = useRef();
-  const linkedInRef = useRef();
+  const linkedInURLRef = useRef();
 
-  const { data: responseData } = useGetData(
+  const { fetchData } = useGetData(
     'https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json'
   );
 
-  console.log('Response Data: ', responseData);
-  const [state, dispatch] = useReducer(reducer, responseData);
+  const [state, dispatch] = useReducer(reducer, defaultProfileData);
 
   const submitHandler = event => {
     event.preventDefault();
@@ -84,6 +108,7 @@ const Form = () => {
     const userNameValue = userNameRef.current.value;
     const passwordValue = passwordRef.current.value;
     const genderValue = genderRef.current.value;
+
     const dateOfBirthValue = dateOfBirthRef.current.value;
     const aboutMeValue = aboutMeRef.current.value;
     const phoneNumberValue = phoneNumberRef.current.value;
@@ -96,7 +121,7 @@ const Form = () => {
 
     const facebookURLValue = facebookURLRef.current.value;
     const twitterURLValue = twitterURLRef.current.value;
-    const linkedInValue = linkedInRef.current.value;
+    const linkedInURLValue = linkedInURLRef.current.value;
 
     dispatch({
       type: 'BASIC_INFO',
@@ -112,51 +137,39 @@ const Form = () => {
       },
     });
 
-    //set value in to profile data
-    // setProfileData(prevValue => {
-    //   //First Solution
-    //   //* use the value of the previous value
-    //   // userName: userNameValue || prevValue.basicInfo.userName,
+    dispatch({
+      type: 'OTHER_DETAILS',
+      otherDetails: {
+        work: workValue,
+        membership: membershipValue,
+        website: websiteValue,
+      },
+    });
 
-    //   return {
-    //     basicInfo: {
-    //       userName: userNameValue || prevValue.basicInfo.userName,
-    //       password: passwordValue || prevValue.basicInfo.password,
-    //       gender: genderValue || prevValue.basicInfo.gender,
-    //       dateOfBirth: dateOfBirthValue || prevValue.basicInfo.dateOfBirth,
-    //       aboutMe: aboutMeValue || prevValue.basicInfo.aboutMe,
-    //       phoneNumber: phoneNumberValue || prevValue.basicInfo.phoneNumberValue,
-    //       location: locationValue || prevValue.basicInfo.location,
-    //       emailId: emailIdValue || prevValue.basicInfo.emailId,
-    //     },
-
-    //     otherDetails: {
-    //       work: workValue || prevValue.otherDetails.work,
-    //       membership: membershipValue || prevValue.otherDetails.membership,
-    //       website: websiteValue || prevValue.otherDetails.website,
-    //     },
-    //     socialMedia: {
-    //       facebookURL: facebookURLValue || prevValue.socialMedia.facebookURL,
-    //       twitterURL: twitterURLValue || prevValue.socialMedia.twitterURL,
-    //       linkedInURL: linkedInValue || prevValue.socialMedia.linkedIn,
-    //     },
-    //   };
-    // });
+    dispatch({
+      type: 'SOCIAL_MEDIA',
+      socialMedia: {
+        facebookURL: facebookURLValue,
+        twitterURL: twitterURLValue,
+        linkedInURL: linkedInURLValue,
+      },
+    });
   };
 
   useEffect(() => {
     (async () => {
+      const responseData = await fetchData();
       await fetch(
         'https://tomatu-5dbea-default-rtdb.firebaseio.com/profile.json',
         {
           method: 'PUT',
           body: JSON.stringify({
-            basicInfo: { ...state.basicInfo },
+            state,
           }),
         }
       );
     })();
-  }, [state]);
+  }, [state, fetchData]);
 
   return (
     <div className={styles['profile__content--personal-info']}>
@@ -226,7 +239,7 @@ const Form = () => {
         />
         <FormInput label='Facebook URL*' innerRef={facebookURLRef} />
         <FormInput label='Twitter URL*' innerRef={twitterURLRef} />
-        <FormInput label='Linked In*' innerRef={linkedInRef} />
+        <FormInput label='Linked In*' innerRef={linkedInURLRef} />
         <Button className='small'>Save Profile</Button>
       </form>
     </div>

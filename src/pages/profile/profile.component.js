@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './profile.module.css';
 import Navbar from '../../components/navbar/navbar.component';
 import Sidebar from '../../components/sidebar/sidebar.component';

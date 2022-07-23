@@ -10,7 +10,7 @@
 
 .form__logo {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
 }
 .form__heading {
