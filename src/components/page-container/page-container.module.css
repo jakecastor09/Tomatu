@@ -1,0 +1,6 @@
+.flex {
+  display: flex;
+}
+.page-container {
+  background-color: var(--light-background-color);
+}

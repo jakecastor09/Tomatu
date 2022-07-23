@@ -1,27 +1,21 @@
 import styles from './profile-page.module.css';
-import Navbar from '../../components/navbar/navbar.component';
-import Sidebar from '../../components/sidebar/sidebar.component';
 import HeadingBar from '../../components/heading-bar/heading-bar.component';
 import FileUpload from './file-upload.component';
-
 import Form from './form.component';
+import PageContainer from '../../components/page-container/page-container.component';
 const Profile = () => {
   return (
-    <section className={`${styles['profile']} container`}>
-      <Navbar />
-      <div className={styles.flex}>
-        <Sidebar />
-        <div className={styles['profile__container']}>
-          <HeadingBar pageName='Profile' />
-          <div className={styles['profile__content']}>
-            <div className={styles['profile__content--edit-image']}>
-              <FileUpload />
-            </div>
-            <Form />
+    <PageContainer>
+      <div className={styles['profile__container']}>
+        <HeadingBar pageName='Profile' />
+        <div className={styles['profile__content']}>
+          <div className={styles['profile__content--edit-image']}>
+            <FileUpload />
           </div>
+          <Form />
         </div>
       </div>
-    </section>
+    </PageContainer>
   );
 };
 
