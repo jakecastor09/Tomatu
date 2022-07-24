@@ -4,13 +4,13 @@ import { faBurger } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { faIdBadge } from '@fortawesome/free-solid-svg-icons';
+
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faKey } from '@fortawesome/free-solid-svg-icons';
 import SocialNetwork from '../social-network/social-network.component';
-
+import Accordion from '../accordion/accordion.component';
 import Item from './item.component';
 const Sidebar = () => {
   return (
@@ -24,7 +24,10 @@ const Sidebar = () => {
             <Item name='Favourite' icon={faBookmark} />
             <Item name='Order History' icon={faList} />
             <Item name='Booking System' icon={faBook} />
-            <Item name='Profile Page' icon={faIdBadge} />
+            <Accordion
+              items={['Profile Page', 'Edit Page']}
+              headerName='Profile Page'
+            />
           </ul>
         </div>
       </div>

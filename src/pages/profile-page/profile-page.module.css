@@ -1,11 +1,3 @@
-.profile__content {
-  margin: 3rem 3rem;
-  display: flex;
-}
-.profile__content--edit-image {
-  margin-right: 1rem;
-  width: 45rem;
-}
-.profile__container {
-  width: 100vw;
+.content-container {
+  width: 100%;
 }
