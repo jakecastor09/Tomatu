@@ -8,7 +8,6 @@ const Accordion = ({ items = [], headerName }) => {
   const clickHandler = () => {
     setIsClicked(!isClicked);
   };
-  //  TODO: Set the header of the accordion
 
   return (
     <div className={styles.accordion}>

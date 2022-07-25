@@ -31,7 +31,7 @@ const Login = () => {
           </p>
           <form action='#'>
             <FormInput placeholder='Enter your Mobile Number & Email ID' />
-            <FormInput placeholder='Password' />
+            <FormInput placeholder='Password' type='password' />
             <div className={styles['login__agreement']}>
               <input type='checkbox' onChange={checkBoxHandler} />
               <p>
