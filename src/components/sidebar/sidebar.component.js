@@ -25,7 +25,7 @@ const Sidebar = () => {
             <Item name='Order History' icon={faList} />
             <Item name='Booking System' icon={faBook} />
             <Accordion
-              items={['Profile Page', 'Edit Page']}
+              items={['Profile Page', 'Edit Profile']}
               headerName='Profile Page'
             />
           </ul>

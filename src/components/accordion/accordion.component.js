@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Item from '../sidebar/item.component';
 import { faIdBadge } from '@fortawesome/free-solid-svg-icons';
 import styles from './accordion.module.css';
+import { Link } from 'react-router-dom';
 const Accordion = ({ items = [], headerName }) => {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -17,9 +18,11 @@ const Accordion = ({ items = [], headerName }) => {
       {isClicked && items && (
         <div className={styles['accordion-items']}>
           {items.map(item => (
-            <p key={item} className={styles['accordion-item']}>
-              {item}
-            </p>
+            <Link to={'/' + item.toLowerCase().replace(' ', '-')}>
+              <p key={item} className={styles['accordion-item']}>
+                {item}
+              </p>
+            </Link>
           ))}
         </div>
       )}
