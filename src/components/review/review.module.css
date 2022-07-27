@@ -1,0 +1,24 @@
+.review {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+img {
+  width: 5rem;
+}
+.content {
+  margin-left: 3rem;
+}
+.content > h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+.content > p {
+  color: var(--grey-color);
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+.rates-and-date {
+  margin-left: auto;
+}

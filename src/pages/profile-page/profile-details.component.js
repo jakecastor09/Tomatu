@@ -5,6 +5,7 @@ import { storage } from '../../firebase/index';
 import styles from './profile-details.module.css';
 import Button from '../../components/button/button';
 import SocialNetwork from '../../components/social-network/social-network.component';
+
 const ProfileDetails = () => {
   const [avatar, setAvatar] = useState();
   const imageListRef = ref(storage, 'images/');
