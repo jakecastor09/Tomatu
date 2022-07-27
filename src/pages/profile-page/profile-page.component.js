@@ -7,9 +7,9 @@ const ProfilePage = () => {
     <PageContainer>
       <div className={styles['container']}>
         <HeadingBar pageName='Profile Page' />
-      </div>
-      <div className={styles['profile-page__content']}>
-        <ProfileDetails />
+        <div className={styles['profile-page__content']}>
+          <ProfileDetails />
+        </div>
       </div>
     </PageContainer>
   );
