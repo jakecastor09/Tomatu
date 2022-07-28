@@ -4,7 +4,7 @@ const Rating = ({ rates }) => {
   return (
     <div className={styles['rating']}>
       {[...Array(5)].map((item, index) => {
-        return <Star active={index + 1 <= rates} />;
+        return <Star key={index} active={index + 1 <= rates} />;
       })}
     </div>
   );
