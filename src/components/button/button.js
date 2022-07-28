@@ -1,10 +1,10 @@
 import styles from './button.module.css';
-const Button = ({ className, disabled, children, ...otherProps }) => {
+const Button = ({ className, disabled, children, small, ...otherProps }) => {
   return (
     <button
       className={`${disabled ? styles['disabled-button'] : ''} ${
-        styles[className]
-      }`}
+        small && styles.small
+      } ${className}`}
       {...otherProps}
     >
       {children}

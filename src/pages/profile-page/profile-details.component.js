@@ -31,7 +31,7 @@ const ProfileDetails = () => {
         laboriosam.
       </p>
       <SocialNetwork />
-      <Button>Edit Profile</Button>
+      <Button small={true}>Edit Profile</Button>
     </ProfileContainer>
   );
 };

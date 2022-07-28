@@ -1,0 +1,30 @@
+.order-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--dark-grey-color);
+  font-weight: bold;
+}
+.order-item__product {
+  display: flex;
+  align-items: center;
+}
+.order-item__product img {
+  width: 4.2rem;
+}
+
+.order-item__product h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  padding: 0 1.5rem;
+  width: 15rem;
+}
+
+.order-item__date {
+  padding: 0 10rem;
+}
+.order-item__price {
+  color: var(--success-color);
+}

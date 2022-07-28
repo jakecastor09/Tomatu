@@ -240,7 +240,7 @@ const Form = () => {
         <FormInput label='Facebook URL*' innerRef={facebookURLRef} />
         <FormInput label='Twitter URL*' innerRef={twitterURLRef} />
         <FormInput label='Linked In*' innerRef={linkedInURLRef} />
-        <Button className='small'>Save Profile</Button>
+        <Button small={true}>Save Profile</Button>
       </form>
     </div>
   );

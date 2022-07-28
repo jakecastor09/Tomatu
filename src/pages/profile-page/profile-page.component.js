@@ -3,14 +3,20 @@ import PageContainer from '../../components/page-container/page-container.compon
 import HeadingBar from '../../components/heading-bar/heading-bar.component';
 import ProfileDetails from './profile-details.component';
 import PersonalInformation from './personal-information';
+import MyOrder from './my-order.component';
 const ProfilePage = () => {
   return (
     <PageContainer>
       <div className={styles['container']}>
         <HeadingBar pageName='Profile Page' />
         <div className={styles['profile-page__content']}>
-          <ProfileDetails />
-          <PersonalInformation />
+          <div className={styles['profile-page__details']}>
+            <ProfileDetails />
+          </div>
+          <div className={styles['profile-page__info']}>
+            <PersonalInformation />
+            <MyOrder />
+          </div>
         </div>
       </div>
     </PageContainer>

@@ -22,4 +22,5 @@
 .about-me {
   color: var(--grey-color);
   font-size: 1.4rem;
+  text-align: center;
 }
