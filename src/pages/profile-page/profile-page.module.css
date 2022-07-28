@@ -1,3 +1,8 @@
 .container {
   width: 100%;
 }
+.profile-page__content {
+  display: flex;
+  margin: 4rem;
+  gap: 1rem;
+}

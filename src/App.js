@@ -10,16 +10,13 @@ import Review from './components/review/review.component';
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/register-now' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/profile-page' element={<ProfilePage />} />
         <Route exact path='/edit-profile' element={<EditProfile />} />
-      </Routes> */}
-      <Review star={4} />
-      <Review star={5} />
-      <Review star={1} />
+      </Routes>
     </>
   );
 }

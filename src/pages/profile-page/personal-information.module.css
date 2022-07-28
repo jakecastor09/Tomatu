@@ -1,0 +1,30 @@
+.personal-information {
+  margin: 3rem;
+}
+.heading {
+  font-size: 0.8rem;
+  color: var(--dark-grey-color);
+  margin-bottom: 2rem;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.item {
+  display: flex;
+}
+.item h3 {
+  color: var(--primary-color);
+  width: 10rem;
+  font-size: 1.4rem;
+}
+.item h3::after {
+  content: ':';
+}
+
+.item p {
+  color: var(--grey-color);
+  font-size: 1.4rem;
+}
