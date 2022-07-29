@@ -12,12 +12,11 @@
 }
 
 .danger {
-  background-color: #f75757;
+  background-color: var(--primary-color);
 }
 .success {
-  background-color: #78d25b;
+  background-color: var(--success-color);
 }
-
 .tertiary {
-  background-color: #fa9441;
+  background-color: var(--tertiary-color);
 }
