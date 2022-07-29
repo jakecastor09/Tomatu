@@ -1,0 +1,8 @@
+.info-container {
+  margin: 2.5rem;
+}
+.heading {
+  font-size: 0.8rem;
+  color: var(--dark-grey-color);
+  margin-bottom: 2rem;
+}
