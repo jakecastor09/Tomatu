@@ -4,7 +4,7 @@ import HeadingBar from '../../components/heading-bar/heading-bar.component';
 import ProfileDetails from './profile-details.component';
 import PersonalInformation from './personal-information';
 import MyOrder from './my-order.component';
-import MyReviews from './my-reviews.compoent';
+import MyReviews from './my-reviews.component';
 const ProfilePage = () => {
   return (
     <PageContainer>

@@ -8,6 +8,7 @@ import HomePage from './pages/home-page/home-page.component';
 import { Route, Routes, Redirect } from 'react-router-dom';
 import Review from './components/review/review.component';
 import OrderItem from './components/order-item/order-item.component';
+import MyReviewsItem from './pages/profile-page/my-reviews-item.component';
 function App() {
   return (
     <>

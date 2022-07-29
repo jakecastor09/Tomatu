@@ -5,7 +5,6 @@ import Rating from '../rating/rating.component';
 const Review = ({ image, name, comment, star, date }) => {
   const d = new Date();
   const { formatedDate } = useFormatDate(d);
-
   return (
     <Card>
       <div className={styles.review}>
