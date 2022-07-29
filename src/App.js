@@ -9,6 +9,8 @@ import { Route, Routes, Redirect } from 'react-router-dom';
 import Review from './components/review/review.component';
 import OrderItem from './components/order-item/order-item.component';
 import MyReviewsItem from './pages/profile-page/my-reviews-item.component';
+import MenuItem from './components/menu-item/menu-item.component';
+import HighlightedBox from './components/highlighted-box/highlighted-box.component';
 function App() {
   return (
     <>

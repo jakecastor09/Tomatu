@@ -1,0 +1,23 @@
+.text {
+  align-items: center;
+  border-radius: 5rem;
+  color: #fff;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 32px;
+  justify-content: center;
+  margin: 2rem;
+  width: 95px;
+}
+
+.danger {
+  background-color: #f75757;
+}
+.success {
+  background-color: #78d25b;
+}
+
+.tertiary {
+  background-color: #fa9441;
+}
