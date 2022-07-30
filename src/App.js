@@ -11,15 +11,14 @@ import MenuPage from './pages/menu-page/menu-page.component';
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/register-now' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/profile-page' element={<ProfilePage />} />
         <Route exact path='/edit-profile' element={<EditProfile />} />
-      </Routes> */}
-
-      <MenuPage />
+        <Route exact path='/menu' element={<MenuPage />} />
+      </Routes>
     </>
   );
 }

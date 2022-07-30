@@ -4,7 +4,7 @@ const Button = ({ className, disabled, children, small, ...otherProps }) => {
     <button
       className={`${disabled ? styles['disabled-button'] : ''} ${
         small && styles.small
-      } ${className}`}
+      } ${styles[className]}`}
       {...otherProps}
     >
       {children}

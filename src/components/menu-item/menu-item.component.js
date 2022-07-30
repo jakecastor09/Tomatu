@@ -17,7 +17,9 @@ const MenuItem = () => {
             A small river named Duden flows by their place and supplies
           </p>
         </div>
-        <Button>Add to Cart</Button>
+        <Button small={true} className='btn-outline'>
+          Add to Cart
+        </Button>
       </div>
     </Card>
   );
