@@ -1,0 +1,36 @@
+.price-range {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin: 1rem 0;
+}
+.price-range__title {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.price-range__input input {
+  color: var(--dark-grey-color);
+  padding: 1rem;
+  font-weight: bold;
+  width: 8rem;
+  margin: 0;
+}
+
+.price-range__input {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+input[type='range'] {
+  color: var(--primary-color);
+  accent-color: var(--primary-color);
+}

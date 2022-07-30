@@ -1,6 +1,7 @@
 import styles from './menu-filter.module.css';
 import Card from '../../components/card/card.component';
 import FilterItem from './filter-item.component';
+import PriceRange from './price-range.component';
 const MenuFilter = () => {
   return (
     <div className={styles['menu-filter']}>
@@ -30,6 +31,9 @@ const MenuFilter = () => {
           <FilterItem itemName='Mexican' />
           <FilterItem itemName='Indian' />
           <FilterItem itemName='Western' />
+        </div>
+        <div className={styles['menu-filter__item']}>
+          <PriceRange />
         </div>
       </div>
     </div>

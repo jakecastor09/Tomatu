@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import MenuItem from './components/menu-item/menu-item.component';
 import MenuPage from './pages/menu-page/menu-page.component';
 import MenuFilter from './pages/menu-page/menu-filter.component';
+import PriceRange from './pages/menu-page/price-range.component';
 function App() {
   return (
     <>

@@ -1,8 +1,9 @@
 .menu-filter {
   min-width: 26rem;
+  height: fit-content;
   margin-left: 1rem;
   background-color: var(--white-color);
-  padding: 1rem;
+  padding: 1rem 1rem 8rem 1rem;
   border-radius: 3px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
 }
