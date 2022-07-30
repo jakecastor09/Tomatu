@@ -1,0 +1,26 @@
+.menu-filter {
+  min-width: 26rem;
+  margin-left: 1rem;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+}
+.menu-filter__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f2f3;
+  padding: 1rem;
+}
+.menu-filter__header--title {
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.menu-filter__header--reset {
+  color: var(--success-color);
+}
+.menu-filter__item {
+  border-bottom: 1px solid #f1f2f3;
+  padding: 0.8rem 0;
+}

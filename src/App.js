@@ -7,7 +7,7 @@ import HomePage from './pages/home-page/home-page.component';
 import { Route, Routes } from 'react-router-dom';
 import MenuItem from './components/menu-item/menu-item.component';
 import MenuPage from './pages/menu-page/menu-page.component';
-
+import MenuFilter from './pages/menu-page/menu-filter.component';
 function App() {
   return (
     <>

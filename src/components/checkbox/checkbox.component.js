@@ -1,7 +1,15 @@
 import styles from './checkbox.module.css';
-const CheckBox = ({ name, onChange, isChecked, value, innerRef }) => {
+const CheckBox = ({
+  name,
+  onChange,
+  isChecked,
+  value,
+  innerRef,
+  color,
+  textColor,
+}) => {
   return (
-    <div className={styles.checkbox}>
+    <div className={`${styles.checkbox} ${styles[color]}`}>
       <input
         type='checkbox'
         checked={isChecked}
@@ -10,7 +18,9 @@ const CheckBox = ({ name, onChange, isChecked, value, innerRef }) => {
         onChange={onChange}
         ref={innerRef}
       />
-      <label htmlFor='name'>{name}</label>
+      <label htmlFor='name' className={styles[textColor]}>
+        {name}
+      </label>
     </div>
   );
 };

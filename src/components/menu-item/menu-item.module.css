@@ -2,49 +2,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.6rem;
+  padding: 1.4rem 1.2rem;
 }
 .price {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.2rem;
-  width: 7.5rem;
+  height: 2.6rem;
+  width: 6.9rem;
   background-color: var(--success-color);
   color: #fff;
   border-radius: 5rem;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   align-self: flex-end;
+  margin-bottom: 0.5rem;
 }
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 .image-container {
   display: flex;
   justify-content: center;
   background-color: #e8ecef;
-  width: 11rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
   border-radius: 100%;
   margin-bottom: 0.5rem;
 }
 .image-container img {
-  width: 8rem;
+  width: 7rem;
   height: auto;
   object-fit: contain;
 }
 .item-name {
   color: var(--dark-grey-color);
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .item-details {
   color: var(--grey-color);
   text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 2.3rem;
 }
