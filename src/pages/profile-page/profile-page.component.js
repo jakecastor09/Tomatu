@@ -5,6 +5,8 @@ import ProfileDetails from './profile-details.component';
 import PersonalInformation from './personal-information';
 import MyOrder from './my-order.component';
 import MyReviews from './my-reviews.component';
+import SavedCard from './saved-card.component';
+import Address from './address.component';
 const ProfilePage = () => {
   return (
     <PageContainer>
@@ -18,6 +20,8 @@ const ProfilePage = () => {
             <PersonalInformation />
             <MyOrder />
             <MyReviews />
+            <SavedCard />
+            <Address />
           </div>
         </div>
       </div>

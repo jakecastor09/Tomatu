@@ -1,4 +1,6 @@
 .checkbox-group {
   width: 100%;
   display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
 }
