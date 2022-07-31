@@ -20,6 +20,7 @@
 }
 .menu-filter__header--reset {
   color: var(--success-color);
+  cursor: pointer;
 }
 .menu-filter__item {
   border-bottom: 1px solid #f1f2f3;
