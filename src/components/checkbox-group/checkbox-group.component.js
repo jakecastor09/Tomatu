@@ -4,7 +4,7 @@ import CheckBox from '../checkbox/checkbox.component';
 const CheckBoxGroup = ({ list = [], innerRef }) => {
   const [selectedByName, setSelectedByName] = useState('');
   const checkBoxHandler = event => {
-    const name = event.target.name;
+    const name = event.checked;
 
     if (selectedByName === name) {
       setSelectedByName('');

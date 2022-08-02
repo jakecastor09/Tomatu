@@ -1,9 +1,7 @@
 import React from 'react';
 
 const MenuFilterContext = React.createContext({
-  menuType1: [],
-  menuType2: [],
-  menuType3: [],
+  allItemsSelected: [],
   startPrice: 0,
   maxPrice: 1000,
   reset: () => {},

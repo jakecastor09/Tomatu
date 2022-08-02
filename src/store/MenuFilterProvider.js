@@ -8,51 +8,48 @@ import {
 } from '../actions/menu-filter-types';
 
 const defaultState = {
-  menuType1: [],
-  menuType2: [],
-  menuType3: [],
+  allItemsSelected: [],
   startPrice: 0,
   maxPrice: 1000,
 };
 
-const allMenuType1 = [
-  'all promo',
+const allMenu = [
   'special menu',
   'buy 1 get 1',
   'bank promotions',
   'hoppy hour',
   'event',
-];
-const allMenuType2 = [
   'main food',
   'drinks',
   'appetizer',
   'dessert',
   'slide menu',
+  'chinese',
+  'italian',
+  'mexican',
+  'indian',
+  'western',
 ];
-const allMenuType3 = ['chinese', 'italian', 'mexican', 'indian', 'western'];
 
 const reducer = (state, action) => {
   switch (action.type) {
     case SELECT_ALL_ITEM: {
       return {
         ...state,
-        menuType1: allMenuType1,
-        menuType2: allMenuType2,
-        menuType3: allMenuType3,
+        allItemsSelected: allMenu,
       };
     }
     case SELECT_ITEM: {
-      const menuType = state[action.payload.typeMenu];
-      state[menuType] = [...menuType, action.payload.item];
-      return state;
+      const selectedItem = action.payload.item;
+      const newAllItemsSelected = [...state.allItemsSelected, selectedItem];
+      return { allItemsSelected: newAllItemsSelected };
     }
     case REMOVE_SELECTED_ITEM: {
-      const menuType = state[action.payload.typeMenu];
-      state[menuType] = state[menuType].filter(
-        item => item.toLowerCase() !== action.payload.item
+      const selectedItemToRemove = action.payload.item;
+      const newAllItemsSelected = state.allItemsSelected.filter(
+        item => item !== selectedItemToRemove
       );
-      return state;
+      return { allItemsSelected: newAllItemsSelected };
     }
     case RESET: {
       return { ...state, allSelectedItems: [] };
@@ -70,20 +67,18 @@ const MenuFilterProvider = () => {
   const resetHandler = () => {
     dispatch({ type: RESET });
   };
-  const selectItemHandler = (typeMenu, item) => {
-    dispatch({ type: SELECT_ITEM, payload: { typeMenu, item } });
+  const selectItemHandler = item => {
+    dispatch({ type: SELECT_ITEM, payload: item });
   };
-  const removeSelectedItemHandler = (typeMenu, item) => {
-    dispatch({ type: REMOVE_SELECTED_ITEM, payload: { typeMenu, item } });
+  const removeSelectedItemHandler = item => {
+    dispatch({ type: REMOVE_SELECTED_ITEM, payload: item });
   };
   const selectAllItemHandler = () => {
     dispatch({ type: SELECT_ALL_ITEM });
   };
 
   const menuFilterContext = {
-    menuType1: state.menuType1,
-    menuType2: state.menuType2,
-    menuType3: state.menuType3,
+    allItemsSelected: state.allItemsSelected,
     startPrice: state.startPrice,
     maxPrice: state.maxPrice,
     selectAllItem: selectAllItemHandler,
