@@ -7,12 +7,13 @@ const CheckBox = ({
   innerRef,
   color,
   textColor,
+  checked,
 }) => {
   return (
     <div className={`${styles.checkbox} ${styles[color]}`}>
       <input
         type='checkbox'
-        checked={isChecked}
+        checked={isChecked || checked}
         name={name}
         value={value}
         onChange={onChange}

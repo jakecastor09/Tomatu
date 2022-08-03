@@ -9,6 +9,7 @@ import MenuItem from './components/menu-item/menu-item.component';
 import MenuPage from './pages/menu-page/menu-page.component';
 import MenuFilter from './pages/menu-page/menu-filter.component';
 import PriceRange from './pages/menu-page/price-range.component';
+import MenuFilterProvider from './store/MenuFilterProvider';
 function App() {
   return (
     <>
@@ -18,7 +19,15 @@ function App() {
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/profile-page' element={<ProfilePage />} />
         <Route exact path='/edit-profile' element={<EditProfile />} />
-        <Route exact path='/menu' element={<MenuPage />} />
+        <Route
+          exact
+          path='/menu'
+          element={
+            <MenuFilterProvider>
+              <MenuPage />
+            </MenuFilterProvider>
+          }
+        />
       </Routes>
     </>
   );

@@ -1,13 +1,19 @@
+import { useContext } from 'react';
 import styles from './menu-page.module.css';
 import PageContainer from '../../components/page-container/page-container.component';
 import HeadingBar from '../../components/heading-bar/heading-bar.component';
 import MenuItem from '../../components/menu-item/menu-item.component';
 import MenuFilter from './menu-filter.component';
+import MenuFilterContext from '../../store/menu-filter-context';
 const MenuPage = () => {
+  const menuFilterCtx = useContext(MenuFilterContext);
+  console.log(menuFilterCtx.allItemsSelected);
+
   return (
     <PageContainer>
       <div className={styles['menu-page']}>
         <MenuFilter />
+
         <div className={styles.container}>
           <HeadingBar pageName='Menu' />
           <div className={styles.content}>

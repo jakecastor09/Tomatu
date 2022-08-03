@@ -40,19 +40,19 @@ const reducer = (state, action) => {
       };
     }
     case SELECT_ITEM: {
-      const selectedItem = action.payload.item;
+      const selectedItem = action.payload;
       const newAllItemsSelected = [...state.allItemsSelected, selectedItem];
       return { allItemsSelected: newAllItemsSelected };
     }
     case REMOVE_SELECTED_ITEM: {
-      const selectedItemToRemove = action.payload.item;
+      const selectedItemToRemove = action.payload;
       const newAllItemsSelected = state.allItemsSelected.filter(
         item => item !== selectedItemToRemove
       );
       return { allItemsSelected: newAllItemsSelected };
     }
     case RESET: {
-      return { ...state, allSelectedItems: [] };
+      return { ...state, allItemsSelected: [] };
     }
 
     default: {
@@ -61,7 +61,7 @@ const reducer = (state, action) => {
   }
 };
 
-const MenuFilterProvider = () => {
+const MenuFilterProvider = props => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const resetHandler = () => {
@@ -88,9 +88,9 @@ const MenuFilterProvider = () => {
   };
 
   return (
-    <MenuFilterContext.Provider
-      value={menuFilterContext}
-    ></MenuFilterContext.Provider>
+    <MenuFilterContext.Provider value={menuFilterContext}>
+      {props.children}
+    </MenuFilterContext.Provider>
   );
 };
 
