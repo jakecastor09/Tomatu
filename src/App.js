@@ -11,6 +11,8 @@ import MenuFilter from './pages/menu-page/menu-filter.component';
 import PriceRange from './pages/menu-page/price-range.component';
 import MenuFilterProvider from './store/MenuFilterProvider';
 import FavouritePage from './pages/favourite-page/favourite-page.component';
+import OrderHistoryPage from './pages/order-history-page/order-history-page.component';
+
 function App() {
   return (
     <>
@@ -30,6 +32,11 @@ function App() {
           }
         />
         <Route exact path='/favourite' element={<FavouritePage />}></Route>
+        <Route
+          exact
+          path='/order-history'
+          element={<OrderHistoryPage />}
+        ></Route>
       </Routes>
     </>
   );

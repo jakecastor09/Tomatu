@@ -1,0 +1,15 @@
+.order-history-page {
+  width: 100%;
+}
+.order-history-page__title {
+  color: var(--dark-grey-color);
+  padding: 1rem 0;
+  font-size: 1.7rem;
+}
+.order-history-page__content {
+  margin: 2rem 3rem;
+}
+.order-history-page__item {
+  display: grid;
+  gap: 1rem;
+}

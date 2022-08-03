@@ -1,0 +1,10 @@
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-grey-color);
+  background-color: var(--white-color);
+}

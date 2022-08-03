@@ -1,0 +1,28 @@
+import styles from './order-item.module.css';
+import useFormatDate from '../../hook/use-format-date.component';
+import HighlightedBox from '../../components/highlighted-box/highlighted-box.component';
+const OrderItem = ({
+  orderId,
+  product,
+  deliveryDateAndTime,
+  price,
+  status,
+}) => {
+  const d = new Date();
+  const { formatedDate } = useFormatDate(d);
+  return (
+    <div className={styles['order-item']}>
+      <div className={styles['order-item__number']}>01</div>
+      <div className={styles['order-item__order-id']}>#746815</div>
+      <div className={styles['order-item__product']}>Plain Pizza</div>
+      <div className={styles['order-item__delivery-date-and-time']}>
+        {formatedDate}
+      </div>
+      <div className={styles['order-item__price']}>$28.58</div>
+      <div className={styles['order-item__status']}>
+        <HighlightedBox color='success'>Paid</HighlightedBox>
+      </div>
+    </div>
+  );
+};
+export default OrderItem;
