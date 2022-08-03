@@ -1,5 +1,5 @@
 import styles from './highlighted-box.module.css';
-const HighlightedBox = ({ color }) => {
-  return <span className={`${styles.text} ${styles[color]}`}>$25.00</span>;
+const HighlightedBox = ({ color, children }) => {
+  return <span className={`${styles.text} ${styles[color]}`}>{children}</span>;
 };
 export default HighlightedBox;

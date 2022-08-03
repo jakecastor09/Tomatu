@@ -1,0 +1,8 @@
+.fovourite-page {
+  width: 100%;
+}
+.favourite-page__content {
+  margin: 5rem;
+  display: grid;
+  gap: 1rem;
+}

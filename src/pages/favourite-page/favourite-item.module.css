@@ -1,0 +1,21 @@
+.favourite-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.02);
+}
+.favourite-item__product-name {
+  font-size: 1.38rem;
+  color: var(--dark-grey-color);
+  padding: 0 2.5rem;
+  font-weight: 600;
+}
+.favourite-item__img {
+  width: 4.5rem;
+  margin: 0 2rem;
+}
+.favourite-item__price {
+  margin-left: auto;
+}

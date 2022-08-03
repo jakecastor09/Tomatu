@@ -10,6 +10,7 @@ import MenuPage from './pages/menu-page/menu-page.component';
 import MenuFilter from './pages/menu-page/menu-filter.component';
 import PriceRange from './pages/menu-page/price-range.component';
 import MenuFilterProvider from './store/MenuFilterProvider';
+import FavouritePage from './pages/favourite-page/favourite-page.component';
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
             </MenuFilterProvider>
           }
         />
+        <Route exact path='/favourite' element={<FavouritePage />}></Route>
       </Routes>
     </>
   );
