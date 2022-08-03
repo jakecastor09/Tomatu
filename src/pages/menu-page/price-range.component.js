@@ -1,7 +1,23 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import styles from './price-range.module.css';
+import MenuFilterContext from '../../store/menu-filter-context';
 const PriceRange = () => {
   const [value, setValue] = useState(0);
+
+  const menuFilterCtx = useContext(MenuFilterContext);
+
+  //To assign value of start price in menu filter context
+  useEffect(() => {
+    //I used timeout to assign value when the user stop sliding.
+    const timeoutId = setTimeout(() => {
+      menuFilterCtx.startPrice = value;
+      console.log(menuFilterCtx.startPrice);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [value, menuFilterCtx]);
 
   const inputRangeChangeHandler = event => {
     setValue(event.target.value);
