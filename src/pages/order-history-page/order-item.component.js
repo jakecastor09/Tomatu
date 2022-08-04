@@ -10,6 +10,19 @@ const OrderItem = ({
 }) => {
   const d = new Date();
   const { formatedDate } = useFormatDate(d);
+
+  const statusColor = status => {
+    switch (status) {
+      case 'paid':
+        return 'success';
+      case 'cancel':
+        return 'danger';
+      case 'pending':
+        return 'tertiary';
+      default:
+        return '';
+    }
+  };
   return (
     <div className={styles['order-item']}>
       <div className={styles['order-item__number']}>01</div>
@@ -20,7 +33,7 @@ const OrderItem = ({
       </div>
       <div className={styles['order-item__price']}>$28.58</div>
       <div className={styles['order-item__status']}>
-        <HighlightedBox color='success'>Paid</HighlightedBox>
+        <HighlightedBox color={statusColor('paid')}>Paid</HighlightedBox>
       </div>
     </div>
   );
