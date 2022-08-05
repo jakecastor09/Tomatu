@@ -1,27 +1,22 @@
-import Card from '../card/card.component';
 import styles from './menu-item.module.css';
-import Button from '../button/button';
-import Rating from '../rating/rating.component';
-const MenuItem = () => {
-  return (
-    <Card>
-      <div className={styles['menu-item']}>
-        <span className={styles.price}>$25.00</span>
-        <div className={styles.content}>
-          <div className={styles['image-container']}>
-            <img src={require('../../images/burger.png')} alt='' />
-          </div>
-          <h1 className={styles['item-name']}>Chicken Sandwitch</h1>
-          <Rating rates={4} />
-          <p className={styles['item-details']}>
-            A small river named Duden flows by their place and supplies
-          </p>
-        </div>
-        <Button small={true} className='btn-outline'>
-          Add to Cart
-        </Button>
-      </div>
-    </Card>
-  );
+import MenuItemCol1 from './menu-item-col-1.component';
+import MenuItemCol2 from './menu-item-col-2.component';
+import MenuItemCol3 from './menu-item-col-3.component';
+
+const MenuItem = ({ layout }) => {
+  // display the layout that the user picked
+  const displayLayout = () => {
+    switch (layout) {
+      case 1:
+        return <MenuItemCol1 />;
+      case 2:
+        return <MenuItemCol2 />;
+      case 3:
+        return <MenuItemCol3 />;
+      default:
+        return <MenuItemCol2 />;
+    }
+  };
+  return displayLayout(layout);
 };
 export default MenuItem;

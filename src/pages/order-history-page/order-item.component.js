@@ -11,14 +11,25 @@ const OrderItem = ({
   const d = new Date();
   const { formatedDate } = useFormatDate(d);
 
-  const statusColor = status => {
-    switch (status) {
+  const upperCaseTheFirstLetter = text => {
+    const transformedText = text.split('')[0].toUpperCase() + text.slice(1);
+    return transformedText;
+  };
+  // add style for each status
+  const statusColor = (property, status) => {
+    switch (status.toLowerCase()) {
       case 'paid':
-        return 'success';
+        return property === 'background'
+          ? 'success-background'
+          : 'success-text-color';
       case 'cancel':
-        return 'danger';
+        return property === 'background'
+          ? 'danger-background'
+          : 'danger-text-color';
       case 'pending':
-        return 'tertiary';
+        return property === 'background'
+          ? 'tertiary-background'
+          : 'tertiary-text-color';
       default:
         return '';
     }
@@ -31,9 +42,18 @@ const OrderItem = ({
       <div className={styles['order-item__delivery-date-and-time']}>
         {formatedDate}
       </div>
-      <div className={styles['order-item__price']}>$28.58</div>
+      <div
+        className={`${styles['order-item__price']} ${statusColor(
+          'color',
+          status
+        )}`}
+      >
+        $28.58
+      </div>
       <div className={styles['order-item__status']}>
-        <HighlightedBox color={statusColor('paid')}>Paid</HighlightedBox>
+        <HighlightedBox color={statusColor('background', status)}>
+          {upperCaseTheFirstLetter(status)}
+        </HighlightedBox>
       </div>
     </div>
   );

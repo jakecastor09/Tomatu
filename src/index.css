@@ -10,6 +10,26 @@
   --tertiary-color: #fa9441;
 }
 
+.danger-background {
+  background-color: var(--primary-color);
+}
+.success-background {
+  background-color: var(--success-color);
+}
+.tertiary-background {
+  background-color: var(--tertiary-color);
+}
+
+.danger-text-color {
+  color: var(--primary-color);
+}
+.success-text-color {
+  color: var(--success-color);
+}
+.tertiary-text-color {
+  color: var(--tertiary-color);
+}
+
 *,
 *::after,
 *::before {

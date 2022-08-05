@@ -12,6 +12,7 @@ import PriceRange from './pages/menu-page/price-range.component';
 import MenuFilterProvider from './store/MenuFilterProvider';
 import FavouritePage from './pages/favourite-page/favourite-page.component';
 import OrderHistoryPage from './pages/order-history-page/order-history-page.component';
+import MenuItemCol2 from './components/menu-item/menu-item-col-2.component';
 
 function App() {
   return (

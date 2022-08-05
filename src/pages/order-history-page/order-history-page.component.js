@@ -12,10 +12,14 @@ const OrderHistoryPage = () => {
           <h1 className={styles['order-history-page__title']}>Order History</h1>
           <OrderHeader />
           <div className={styles['order-history-page__item']}>
-            <OrderItem />
-            <OrderItem />
-            <OrderItem />
-            <OrderItem />
+            <OrderItem status='paid' />
+            <OrderItem status='pending' />
+            <OrderItem status='paid' />
+            <OrderItem status='cancel' />
+            <OrderItem status='pending' />
+            <OrderItem status='paid' />
+            <OrderItem status='cancel' />
+            <OrderItem status='paid' />
           </div>
         </div>
       </div>
