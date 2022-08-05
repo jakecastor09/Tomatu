@@ -1,0 +1,14 @@
+.menu-items {
+  display: grid;
+  gap: 1rem;
+}
+.col-1 {
+  grid-template-columns: 1fr;
+}
+.col-2 {
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.col-3 {
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}

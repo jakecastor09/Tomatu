@@ -5,14 +5,12 @@ import Login from './pages/login-page/login-page.component';
 import EditProfile from './pages/edit-profile/edit-profile.component';
 import HomePage from './pages/home-page/home-page.component';
 import { Route, Routes } from 'react-router-dom';
-import MenuItem from './components/menu-item/menu-item.component';
 import MenuPage from './pages/menu-page/menu-page.component';
 import MenuFilter from './pages/menu-page/menu-filter.component';
 import PriceRange from './pages/menu-page/price-range.component';
 import MenuFilterProvider from './store/MenuFilterProvider';
 import FavouritePage from './pages/favourite-page/favourite-page.component';
 import OrderHistoryPage from './pages/order-history-page/order-history-page.component';
-import MenuItemCol2 from './components/menu-item/menu-item-col-2.component';
 
 function App() {
   return (
