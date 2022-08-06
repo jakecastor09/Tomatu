@@ -1,11 +1,22 @@
 import styles from './navbar.module.css';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCaretSquareDown } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
+import Dropdown from '../dropdown/dropdown.component';
 const Navbar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const dropdownClickHandler = () => {
+    setIsClicked(!isClicked);
+  };
+  const dropdownComponent = isClicked && (
+    <div className={styles.dropdown}>
+      <Dropdown />
+    </div>
+  );
+
   return (
     <nav className={styles.navbar}>
       <div className={styles['left-side']}>
@@ -34,10 +45,12 @@ const Navbar = () => {
           </div>
           <h3 className={styles.name}>Jake E. Castor</h3>
           <FontAwesomeIcon
-            className={styles.dropdown}
+            onClick={dropdownClickHandler}
+            className={styles['dropdown-btn']}
             icon={faCaretSquareDown}
           />
         </div>
+        {dropdownComponent}
       </div>
     </nav>
   );

@@ -4,9 +4,10 @@
   height: 8vh;
   justify-content: space-between;
   margin-bottom: 1rem;
-  overflow: hidden;
+
   padding: 2rem 4rem;
   background-color: var(--white-color);
+  position: relative;
 }
 
 .left-side {
@@ -107,6 +108,13 @@
   margin: 0 2rem;
 }
 
-.dropdown {
+.dropdown-btn {
   color: var(--primary-color);
+  cursor: pointer;
+}
+.dropdown {
+  position: absolute;
+  top: 6rem;
+  right: 0.5rem;
+  z-index: 100;
 }

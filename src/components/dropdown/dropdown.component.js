@@ -11,6 +11,9 @@ const Dropdown = () => {
       <DropdownItem name='Personal Info' icon={faUser} />
       <DropdownItem name='Order List' icon={faClipboard} />
       <DropdownItem name='Favourites' icon={faHeart} />
+      <DropdownItem name='Personal Info' icon={faUser} />
+      <DropdownItem name='Order List' icon={faClipboard} />
+      <DropdownItem name='Favourites' icon={faHeart} />
     </div>
   );
 };

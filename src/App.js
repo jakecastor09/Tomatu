@@ -17,7 +17,7 @@ import Dropdown from './components/dropdown/dropdown.component';
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/register-now' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
@@ -38,8 +38,7 @@ function App() {
           path='/order-history'
           element={<OrderHistoryPage />}
         ></Route>
-      </Routes> */}
-      <Dropdown />
+      </Routes>
     </>
   );
 }
