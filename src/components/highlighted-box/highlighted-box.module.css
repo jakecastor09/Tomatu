@@ -9,13 +9,3 @@
   justify-content: center;
   width: 95px;
 }
-
-.danger {
-  background-color: var(--primary-color);
-}
-.success {
-  background-color: var(--success-color);
-}
-.tertiary {
-  background-color: var(--tertiary-color);
-}

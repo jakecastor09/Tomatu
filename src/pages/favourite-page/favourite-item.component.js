@@ -1,5 +1,4 @@
 import styles from './favourite-item.module.css';
-import Card from '../../components/card/card.component';
 import HighlightedBox from '../../components/highlighted-box/highlighted-box.component';
 const FavouriteItem = ({ image, productName, price }) => {
   return (
@@ -13,7 +12,7 @@ const FavouriteItem = ({ image, productName, price }) => {
         Chicken Sandwich
       </h3>
       <div className={styles['favourite-item__price']}>
-        <HighlightedBox color='danger'>$25</HighlightedBox>
+        <HighlightedBox color='danger-background'>$25</HighlightedBox>
       </div>
     </div>
   );

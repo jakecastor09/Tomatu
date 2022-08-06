@@ -7,23 +7,23 @@
   background-color: transparent;
 }
 
-h3 {
+.order-header h3 {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-h3:nth-child(2) {
+.order-header h3:nth-child(2) {
   transform: translateX(-1.4rem);
 }
-h3:nth-child(3) {
+.order-header h3:nth-child(3) {
   transform: translateX(-2.5rem);
 }
-h3:nth-child(4) {
+.order-header h3:nth-child(4) {
   transform: translateX(-3.5rem);
 }
-h3:nth-child(5) {
+.order-header h3:nth-child(5) {
   transform: translateX(-5rem);
 }
-h3:nth-child(6) {
+.order-header h3:nth-child(6) {
   transform: translateX(-2em);
 }

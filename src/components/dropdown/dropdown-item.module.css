@@ -1,0 +1,19 @@
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.icon {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--grey-color);
+}

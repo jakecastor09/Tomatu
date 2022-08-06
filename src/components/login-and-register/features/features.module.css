@@ -1,5 +1,6 @@
 .features {
   position: relative;
+  overflow: hidden;
 }
 .list {
   display: grid;
@@ -8,11 +9,9 @@
 }
 .features__img {
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
   width: 100%;
-  max-height: 100vh;
+  height: auto;
 }
 .shadow {
   background: rgba(0, 0, 0, 0.8);
