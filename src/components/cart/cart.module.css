@@ -1,0 +1,5 @@
+.cart-items {
+  width: 50rem;
+  max-height: 35rem;
+  overflow-y: scroll;
+}

@@ -11,10 +11,12 @@ const OrderItem = ({
   const d = new Date();
   const { formatedDate } = useFormatDate(d);
 
+  //Uppercase the first letter of the text
   const upperCaseTheFirstLetter = text => {
     const transformedText = text.split('')[0].toUpperCase() + text.slice(1);
     return transformedText;
   };
+
   // add style for each status
   const statusColor = (property, status) => {
     switch (status.toLowerCase()) {

@@ -13,11 +13,12 @@ import FavouritePage from './pages/favourite-page/favourite-page.component';
 import OrderHistoryPage from './pages/order-history-page/order-history-page.component';
 
 import Dropdown from './components/dropdown/dropdown.component';
-
+import CartItem from './components/cart/cart-item.component';
+import Cart from './components/cart/cart.component';
 function App() {
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route exact path='/' element={<HomePage />} />
         <Route exact path='/register-now' element={<Register />} />
         <Route exact path='/login' element={<Login />} />
@@ -38,7 +39,8 @@ function App() {
           path='/order-history'
           element={<OrderHistoryPage />}
         ></Route>
-      </Routes>
+      </Routes> */}
+      <Cart />
     </>
   );
 }
