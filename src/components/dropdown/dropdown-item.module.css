@@ -19,7 +19,7 @@
   justify-content: center;
 }
 
-h3 {
+.dropdown-item h3 {
   font-size: 1.5rem;
   color: var(--grey-color);
 }

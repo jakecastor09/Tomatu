@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem;
-  border-bottom: 1px solid var(--grey-color);
+  border-bottom: 1px dotted var(--grey-color);
 }
 .item-details {
   display: flex;
@@ -14,12 +14,12 @@
 .cart-item h2 {
   text-transform: none;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--dark-grey-color);
 }
 .price {
   color: var(--dark-grey-color);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .price::before {
   content: '@ ';
@@ -37,12 +37,12 @@
   color: var(--grey-color);
 }
 .button {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--grey-color);
   cursor: pointer;
 }
 .amount {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: var(--primary-color);
   font-weight: bold;
 }

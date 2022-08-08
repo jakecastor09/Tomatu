@@ -1,5 +1,76 @@
+.cart {
+  width: 40rem;
+}
+.title {
+  text-align: center;
+  padding: 1.6rem 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  border-bottom: 1px dotted var(--grey-color);
+}
+.cart-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px dotted var(--grey-color);
+}
+.cart-item-header h3 {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.cart-item-header p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--grey-color);
+}
+
 .cart-items {
-  width: 50rem;
   max-height: 35rem;
   overflow-y: scroll;
+}
+
+.cart-footer {
+  padding: 0 2rem;
+}
+.payment-details {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-bottom: 1px dotted var(--grey-color);
+}
+.sub-total,
+.total-amount,
+.tax {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-total__name,
+.tax__name {
+  color: var(--grey-color);
+  font-size: 1.2rem;
+}
+
+.sub-total__value,
+.tax__value {
+  color: var(--dark-grey-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.total-amount {
+  padding: 2rem 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  border-bottom: 1px dotted var(--grey-color);
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0;
 }

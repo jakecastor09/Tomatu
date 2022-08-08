@@ -24,7 +24,7 @@
   gap: 2rem;
 }
 
-span {
+.price-range__input span {
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--primary-color);
