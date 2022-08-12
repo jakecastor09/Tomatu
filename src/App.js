@@ -11,6 +11,7 @@ import PriceRange from './pages/menu-page/price-range.component';
 import MenuFilterProvider from './store/MenuFilterProvider';
 import FavouritePage from './pages/favourite-page/favourite-page.component';
 import OrderHistoryPage from './pages/order-history-page/order-history-page.component';
+import DropdownProvider from './store/DropdownProvider';
 
 import Dropdown from './components/dropdown/dropdown.component';
 import CartItem from './components/cart/cart-item.component';
@@ -18,29 +19,30 @@ import Cart from './components/cart/cart.component';
 function App() {
   return (
     <>
-      {/* <Routes>
-        <Route exact path='/' element={<HomePage />} />
-        <Route exact path='/register-now' element={<Register />} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/profile-page' element={<ProfilePage />} />
-        <Route exact path='/edit-profile' element={<EditProfile />} />
-        <Route
-          exact
-          path='/menu'
-          element={
-            <MenuFilterProvider>
-              <MenuPage />
-            </MenuFilterProvider>
-          }
-        />
-        <Route exact path='/favourite' element={<FavouritePage />}></Route>
-        <Route
-          exact
-          path='/order-history'
-          element={<OrderHistoryPage />}
-        ></Route>
-      </Routes> */}
-      <Cart />
+      <DropdownProvider>
+        <Routes>
+          <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/register-now' element={<Register />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/profile-page' element={<ProfilePage />} />
+          <Route exact path='/edit-profile' element={<EditProfile />} />
+          <Route
+            exact
+            path='/menu'
+            element={
+              <MenuFilterProvider>
+                <MenuPage />
+              </MenuFilterProvider>
+            }
+          />
+          <Route exact path='/favourite' element={<FavouritePage />}></Route>
+          <Route
+            exact
+            path='/order-history'
+            element={<OrderHistoryPage />}
+          ></Route>
+        </Routes>
+      </DropdownProvider>
     </>
   );
 }

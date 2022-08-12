@@ -1,5 +1,7 @@
 .cart {
   width: 40rem;
+  height: 100vh;
+  background-color: var(--white-color);
 }
 .title {
   text-align: center;

@@ -1,19 +1,31 @@
 import styles from './navbar.module.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCaretSquareDown } from '@fortawesome/free-solid-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from '../dropdown/dropdown.component';
+import DropdownContext from '../../store/dropdown-context';
+import Cart from '../cart/cart.component';
 const Navbar = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const dropdownCtx = useContext(DropdownContext);
+
+  const [isDropdownClicked, setIsDropdownClicked] = useState(false);
+
   const dropdownClickHandler = () => {
-    setIsClicked(!isClicked);
+    setIsDropdownClicked(!isDropdownClicked);
   };
-  const dropdownComponent = isClicked && (
+
+  const dropdownComponent = isDropdownClicked && (
     <div className={styles.dropdown}>
       <Dropdown />
+    </div>
+  );
+
+  const showCart = dropdownCtx.selectedItem === 'order list' && (
+    <div className={styles.cart}>
+      <Cart />
     </div>
   );
 
@@ -51,6 +63,7 @@ const Navbar = () => {
           />
         </div>
         {dropdownComponent}
+        {showCart}
       </div>
     </nav>
   );
