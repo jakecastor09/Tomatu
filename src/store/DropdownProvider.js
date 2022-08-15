@@ -6,6 +6,10 @@ const defaultState = {
 };
 
 const reducer = (state, action) => {
+  if (!action.type) {
+    return defaultState;
+  }
+
   if (action.type) {
     return {
       ...state,
